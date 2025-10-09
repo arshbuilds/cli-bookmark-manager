@@ -1,0 +1,15 @@
+[
+  {
+    "id": 1,
+    "title": "github",
+    "url": "https://example.com",
+    "tags": [
+      "study",
+      "work",
+      "tech"
+    ],
+    "notes": "main github repo hosting site",
+    "createdAt": "2025-10-09T10:32:00.920Z",
+    "metadata": {}
+  }
+]
