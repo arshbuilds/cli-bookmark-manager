@@ -1,0 +1,7 @@
+{
+  "name": "cli-bookmark-manager",
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": "arshbuilds <arshisha2516@gmail.com>",
+  "license": "MIT"
+}
