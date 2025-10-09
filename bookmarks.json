@@ -1,15 +1,67 @@
 [
   {
-    "id": 1,
-    "title": "github",
-    "url": "https://example.com",
-    "tags": [
-      "study",
-      "work",
-      "tech"
-    ],
-    "notes": "main github repo hosting site",
-    "createdAt": "2025-10-09T10:32:00.920Z",
-    "metadata": {}
+    "id": "1",
+    "url": "https://github.com",
+    "title": "GitHub",
+    "tags": ["code", "git", "projects"],
+    "notes": "Host and collaborate on code repositories",
+    "createdAt": "2025-10-09T09:00:00Z",
+    "updatedAt": "2025-10-09T09:00:00Z",
+    "metadata": {
+      "favicon": "https://github.githubassets.com/favicon.ico",
+      "description": "GitHub is where the world builds software."
+    }
+  },
+  {
+    "id": "2",
+    "url": "https://developer.mozilla.org",
+    "title": "MDN Web Docs",
+    "tags": ["docs", "web", "javascript"],
+    "notes": "Comprehensive documentation for web developers",
+    "createdAt": "2025-10-09T09:05:00Z",
+    "updatedAt": "2025-10-09T09:05:00Z",
+    "metadata": {
+      "favicon": "https://developer.mozilla.org/favicon.ico",
+      "description": "Resources for developers, by developers."
+    }
+  },
+  {
+    "id": "3",
+    "url": "https://openai.com",
+    "title": "OpenAI",
+    "tags": ["ai", "research", "ml"],
+    "notes": "Artificial intelligence research and products",
+    "createdAt": "2025-10-09T09:10:00Z",
+    "updatedAt": "2025-10-09T09:10:00Z",
+    "metadata": {
+      "favicon": "https://openai.com/favicon.ico",
+      "description": "Advancing digital intelligence."
+    }
+  },
+  {
+    "id": "4",
+    "url": "https://stackoverflow.com",
+    "title": "Stack Overflow",
+    "tags": ["questions", "programming", "community"],
+    "notes": "Programming Q&A community",
+    "createdAt": "2025-10-09T09:15:00Z",
+    "updatedAt": "2025-10-09T09:15:00Z",
+    "metadata": {
+      "favicon": "https://stackoverflow.com/favicon.ico",
+      "description": "Where developers learn, share, & build careers."
+    }
+  },
+  {
+    "id": "5",
+    "url": "https://arxiv.org",
+    "title": "arXiv",
+    "tags": ["research", "papers", "science"],
+    "notes": "Preprint repository for scientific papers",
+    "createdAt": "2025-10-09T09:20:00Z",
+    "updatedAt": "2025-10-09T09:20:00Z",
+    "metadata": {
+      "favicon": "https://arxiv.org/favicon.ico",
+      "description": "Research papers in physics, computer science, etc."
+    }
   }
 ]
