@@ -2,6 +2,7 @@ import { Command } from "commander";
 import fs from "fs";
 import path from "path";
 import Fuse from "fuse.js";
+import Table from "cli-table3";
 
 const DATA_FILE = path.join(process.cwd(), "bookmarks.json");
 
@@ -20,14 +21,9 @@ function loadBookMarks() {
 const searchCommand = new Command("search")
   .description("Search for items in the list")
   .argument("[query]", "Query string to search for")
-  .option("-a, --all", "shows all bookmarks")
-  .action((query, options) => {
+  .action((query) => {
     let bookmarks = loadBookMarks();
-    if (options.all) {
-        console.log("Showing all ${bookmarks.length} bookmarks:");
-        console.log(bookmarks);
-        return
-    } 
+    let table = new Table()
 
     if (!query) {
         console.log("Please provide a query or use --all to show all bookmarks.");
@@ -42,8 +38,9 @@ const searchCommand = new Command("search")
       console.log(`❌ No bookmarks found for "${query}"`);
     } else {
       console.log(`🔎 Found ${results.length} result(s) for "${query}":`);
-      results.forEach(b => console.log(`- [${b.id}] ${b.title} (${b.url})`));
+      results.forEach(b => table.push([b.id, b.title, b.url, b.tags ? b.tags.join(", ") : ""]));
     }
+    console.log(table.toString());
 });
 
 export default searchCommand;

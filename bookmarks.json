@@ -3,65 +3,98 @@
     "id": "1",
     "url": "https://github.com",
     "title": "GitHub",
-    "tags": ["code", "git", "projects"],
+    "tags": [
+      "code",
+      "git",
+      "projects"
+    ],
     "notes": "Host and collaborate on code repositories",
     "createdAt": "2025-10-09T09:00:00Z",
     "updatedAt": "2025-10-09T09:00:00Z",
     "metadata": {
-      "favicon": "https://github.githubassets.com/favicon.ico",
-      "description": "GitHub is where the world builds software."
+      "title": "GitHub · Change is constant. GitHub keeps you ahead. · GitHubAmerican AirlinesDuolingoErnst and YoungFordInfoSysMercado LibreMercedes-BenzShopifyPhilipsSociété GénéraleSpotifyVodafoneAmerican AirlinesDuolingoErnst and YoungFordInfoSysMercado LibreMercedes-BenzShopifyPhilipsSociété GénéraleSpotifyVodafoneInstagramTikTokTwitch",
+      "description": "Join the world's most widely adopted, AI-powered developer platform where millions of developers, businesses, and the largest open source community build software that advances humanity.",
+      "keywords": "",
+      "content": "We read every piece of feedback, and take your input very seriously.",
+      "favicon": "https://github.githubassets.com/favicons/favicon.svg",
+      "addedAt": "2025-10-31T11:53:14.225Z"
     }
   },
   {
     "id": "2",
     "url": "https://developer.mozilla.org",
     "title": "MDN Web Docs",
-    "tags": ["docs", "web", "javascript"],
+    "tags": [
+      "docs",
+      "web",
+      "javascript"
+    ],
     "notes": "Comprehensive documentation for web developers",
     "createdAt": "2025-10-09T09:05:00Z",
     "updatedAt": "2025-10-09T09:05:00Z",
     "metadata": {
+      "title": "MDN Web DocsMDNMandala",
+      "description": "The MDN Web Docs site provides information about Open Web technologies including HTML, CSS, and APIs for both Web sites and progressive web apps.",
+      "keywords": "",
+      "content": "\n                      HTML: Markup language\n                    ",
       "favicon": "https://developer.mozilla.org/favicon.ico",
-      "description": "Resources for developers, by developers."
+      "addedAt": "2025-10-31T11:53:13.846Z"
     }
   },
   {
     "id": "3",
     "url": "https://openai.com",
     "title": "OpenAI",
-    "tags": ["ai", "research", "ml"],
+    "tags": [
+      "ai",
+      "research",
+      "ml"
+    ],
     "notes": "Artificial intelligence research and products",
     "createdAt": "2025-10-09T09:10:00Z",
     "updatedAt": "2025-10-09T09:10:00Z",
-    "metadata": {
-      "favicon": "https://openai.com/favicon.ico",
-      "description": "Advancing digital intelligence."
-    }
+    "metadata": {}
   },
   {
     "id": "4",
     "url": "https://stackoverflow.com",
     "title": "Stack Overflow",
-    "tags": ["questions", "programming", "community"],
+    "tags": [
+      "questions",
+      "programming",
+      "community"
+    ],
     "notes": "Programming Q&A community",
     "createdAt": "2025-10-09T09:15:00Z",
     "updatedAt": "2025-10-09T09:15:00Z",
     "metadata": {
-      "favicon": "https://stackoverflow.com/favicon.ico",
-      "description": "Where developers learn, share, & build careers."
+      "title": "Newest Questions - Stack Overflow",
+      "description": "",
+      "keywords": "",
+      "content": "\n                                        Communities for your favorite technologies.  Explore all Collectives\n                                    ",
+      "favicon": "/favicon.ico",
+      "addedAt": "2025-10-31T11:53:14.318Z"
     }
   },
   {
     "id": "5",
     "url": "https://arxiv.org",
     "title": "arXiv",
-    "tags": ["research", "papers", "science"],
+    "tags": [
+      "research",
+      "papers",
+      "science"
+    ],
     "notes": "Preprint repository for scientific papers",
     "createdAt": "2025-10-09T09:20:00Z",
     "updatedAt": "2025-10-09T09:20:00Z",
     "metadata": {
-      "favicon": "https://arxiv.org/favicon.ico",
-      "description": "Research papers in physics, computer science, etc."
+      "title": "arXiv.org e-Print archiveopen searchopen navigation menucontact arXivsubscribe to arXiv mailings",
+      "description": "",
+      "keywords": "",
+      "content": "Help | Advanced Search",
+      "favicon": "/static/browse/0.3.4/images/icons/favicon-32x32.png",
+      "addedAt": "2025-10-31T11:53:13.542Z"
     }
   }
 ]

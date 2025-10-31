@@ -2,20 +2,42 @@ import { Command } from "commander";
 import fs from "fs";
 import path from "path";
 import prompts from "prompts";
+import axios from "axios";
+import * as cheerio from "cheerio";
 
 const DATA_FILE = path.join(process.cwd(), "bookmarks.json");
 
-
 function loadBookMarks() {
-    if (!fs.existsSync(DATA_FILE)) return [];
-    
-    try {
-        const data = fs.readFileSync(DATA_FILE, "utf8");
-        return data ? JSON.parse(data) : [];
-    } catch (err) {
-        console.warn("⚠️ bookmarks.json is corrupted, resetting to empty array");
-        return [];
-    }
+  if (!fs.existsSync(DATA_FILE)) return [];
+
+  try {
+    const data = fs.readFileSync(DATA_FILE, "utf8");
+    return data ? JSON.parse(data) : [];
+  } catch (err) {
+    console.warn("⚠️ bookmarks.json is corrupted, resetting to empty array");
+    return [];
+  }
+}
+
+async function scrapeSite(url) {
+  try {
+    const { data } = await axios.get(url, {
+      headers: { "User-Agent": "Mozilla/5.0" },
+    });
+
+    const $ = cheerio.load(data);
+    return {
+      title: $("title").text() || "",
+      description: $('meta[name="description"]').attr("content") || "",
+      keywords: $('meta[name="keywords"]').attr("content") || "",
+      content: $("p").first().text() || "",
+      favicon: $('link[rel="icon"]').attr("href") || "/favicon.ico",
+      addedAt: new Date().toISOString(),
+    };
+  } catch (e) {
+    console.error("Failed to fetch URL:", e.message);
+    return {};
+  }
 }
 
 function addBookmark(bookmark) {
@@ -35,6 +57,8 @@ const addCommand = new Command("add")
   .action(async (url, options) => {
     let { title, tags, notes } = options;
     let bookmarks = loadBookMarks();
+    let metadata = await scrapeSite(url);
+
     if (!title || !tags || !notes) {
       const response = await prompts([
         {
@@ -65,13 +89,13 @@ const addCommand = new Command("add")
     }
 
     const newBookmark = {
-        id: bookmarks.length + 1,
-        title: title,
-        url: url,
-        tags: tags,
-        notes: notes,
-        createdAt: new Date().toISOString(),
-        metadata: {},
+      id: bookmarks.length + 1,
+      title: title,
+      url: url,
+      tags: tags,
+      notes: notes,
+      createdAt: new Date().toISOString(),
+      metadata,
     };
 
     addBookmark(newBookmark);

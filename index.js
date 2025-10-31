@@ -4,6 +4,9 @@ import addCommand from "./commands/add.js";
 import searchCommand from "./commands/search.js";
 import deleteCommand from "./commands/delete.js";
 import editCommand from "./commands/edit.js";
+import syncCommand from "./commands/sync.js";
+import showCommand from "./commands/show.js";
+import openCommand from "./commands/open.js";
 
 const program = new Command();
 
@@ -15,6 +18,8 @@ program
 program.addCommand(addCommand);
 program.addCommand(searchCommand);
 program.addCommand(deleteCommand);
-program.addCommand(editCommand)
-
+program.addCommand(editCommand);
+program.addCommand(syncCommand);
+program.addCommand(showCommand);
+program.addCommand(openCommand);
 program.parse();
